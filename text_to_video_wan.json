@@ -1,0 +1,160 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 418671305302100,
+      "steps": 30,
+      "cfg": 6,
+      "sampler_name": "uni_pc",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "48",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "high quality 3D animated cinematic video, vertical 9:16, a cute young anthropomorphic bear named Milo, consistent character design throughout the entire video, warm brown soft fluffy fur, slightly lighter muzzle and belly, large round ears, small messy tuft of fur on top of his head, large round bright blue expressive eyes, dark brown nose, friendly round face, big joyful smile, pink tongue naturally visible while smiling, wearing a bright blue hoodie and a green adventurer backpack with brown straps, childlike proportions, adorable friendly appearance\n\nMilo is walking through a beautiful magical forest, lush green vegetation, colorful flowers, tall trees, warm sunlight passing through the leaves, cinematic fantasy environment, a beautiful waterfall visible in the distance, peaceful adventurous atmosphere\n\nMilo suddenly notices a small glowing blue magical crystal beside a rock near the path. He stops walking, looks surprised and curious, slowly approaches the crystal, his blue eyes become wide with wonder, the crystal begins glowing brighter, blue magical light illuminates Milo's face, Milo smiles with excitement, then looks directly toward the camera as if talking to the viewer, excited and happy to begin a new adventure\n\nnatural fluid character animation, realistic walking movement, subtle breathing, natural blinking, expressive face, natural ear movement, natural arm and paw gestures, backpack moving naturally with his body, cinematic camera movement, smooth tracking shot following Milo, gradual camera push-in when he discovers the crystal, close enough to clearly see Milo's face, beautiful cinematic lighting, detailed soft fur, high quality 3D animation, family-friendly animated movie quality, colorful magical atmosphere, coherent character, consistent face, consistent clothing, consistent proportions, smooth motion",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "low quality, low resolution, blurry, pixelated, bad anatomy, deformed character, distorted face, inconsistent character, different character, changing character, changing clothes, changing fur color, changing eye color, adult bear, realistic animal, scary bear, creepy face, asymmetrical eyes, deformed eyes, extra eyes, extra ears, missing ears, deformed ears, extra arms, extra legs, extra paws, extra fingers, missing limbs, malformed hands, malformed paws, distorted body, stretched body, duplicated character, multiple Milo, duplicate objects, floating objects, broken anatomy, unnatural walking, stiff animation, robotic movement, jerky movement, flickering, frame inconsistency, temporal artifacts, texture changes, unstable background, camera shake, extreme camera movement, blurry face, distorted mouth, deformed mouth, bad facial expression, unnatural expression, frozen face, artifacts, noise, oversaturated, underexposed, dark horror atmosphere, text, subtitles, captions, logo, watermark",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "wan2.1_t2v_1.3B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Charger Modèle Diffusion"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Charger CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Charger VAE"
+    }
+  },
+  "40": {
+    "inputs": {
+      "width": 480,
+      "height": 832,
+      "length": 241,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "EmptyHunyuanLatentVideo"
+    }
+  },
+  "48": {
+    "inputs": {
+      "shift": 8,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModèleÉchantillonnageSD3"
+    }
+  },
+  "49": {
+    "inputs": {
+      "fps": 16,
+      "bit_depth": "auto",
+      "color_space": "sRGB",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Créer une vidéo"
+    }
+  },
+  "50": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "mp4",
+      "format.codec": "auto",
+      "codec": "auto",
+      "video": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Enregistrer la vidéo"
+    }
+  }
+}
