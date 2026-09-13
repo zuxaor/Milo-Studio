@@ -26,11 +26,10 @@ jobs:
       - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 24
 
       - name: Installer les dépendances
-        run: npm ci
+        run: npm install
 
       - name: Construire Milo Studio
         run: npm run build
