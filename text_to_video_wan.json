@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 418671305302100,
+      "seed": 572757379842687,
       "steps": 30,
       "cfg": 6,
       "sampler_name": "uni_pc",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "high quality 3D animated cinematic video, vertical 9:16, a cute young anthropomorphic bear named Milo, consistent character design throughout the entire video, warm brown soft fluffy fur, slightly lighter muzzle and belly, large round ears, small messy tuft of fur on top of his head, large round bright blue expressive eyes, dark brown nose, friendly round face, big joyful smile, pink tongue naturally visible while smiling, wearing a bright blue hoodie and a green adventurer backpack with brown straps, childlike proportions, adorable friendly appearance\n\nMilo is walking through a beautiful magical forest, lush green vegetation, colorful flowers, tall trees, warm sunlight passing through the leaves, cinematic fantasy environment, a beautiful waterfall visible in the distance, peaceful adventurous atmosphere\n\nMilo suddenly notices a small glowing blue magical crystal beside a rock near the path. He stops walking, looks surprised and curious, slowly approaches the crystal, his blue eyes become wide with wonder, the crystal begins glowing brighter, blue magical light illuminates Milo's face, Milo smiles with excitement, then looks directly toward the camera as if talking to the viewer, excited and happy to begin a new adventure\n\nnatural fluid character animation, realistic walking movement, subtle breathing, natural blinking, expressive face, natural ear movement, natural arm and paw gestures, backpack moving naturally with his body, cinematic camera movement, smooth tracking shot following Milo, gradual camera push-in when he discovers the crystal, close enough to clearly see Milo's face, beautiful cinematic lighting, detailed soft fur, high quality 3D animation, family-friendly animated movie quality, colorful magical atmosphere, coherent character, consistent face, consistent clothing, consistent proportions, smooth motion",
+      "text": "",
       "clip": [
         "38",
         0
@@ -44,7 +44,7 @@
   },
   "7": {
     "inputs": {
-      "text": "low quality, low resolution, blurry, pixelated, bad anatomy, deformed character, distorted face, inconsistent character, different character, changing character, changing clothes, changing fur color, changing eye color, adult bear, realistic animal, scary bear, creepy face, asymmetrical eyes, deformed eyes, extra eyes, extra ears, missing ears, deformed ears, extra arms, extra legs, extra paws, extra fingers, missing limbs, malformed hands, malformed paws, distorted body, stretched body, duplicated character, multiple Milo, duplicate objects, floating objects, broken anatomy, unnatural walking, stiff animation, robotic movement, jerky movement, flickering, frame inconsistency, temporal artifacts, texture changes, unstable background, camera shake, extreme camera movement, blurry face, distorted mouth, deformed mouth, bad facial expression, unnatural expression, frozen face, artifacts, noise, oversaturated, underexposed, dark horror atmosphere, text, subtitles, captions, logo, watermark",
+      "text": "",
       "clip": [
         "38",
         0
