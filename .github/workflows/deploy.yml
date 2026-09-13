@@ -20,24 +20,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Installer Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
 
-      - name: Installer les dépendances
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Construire Milo Studio
+      - name: Build
         run: npm run build
 
-      - name: Configurer GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Préparer le site
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -51,6 +52,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Publier sur GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
